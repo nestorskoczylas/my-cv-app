@@ -3,6 +3,8 @@ import { createI18n } from 'vue-i18n'
 
 import messages from 'src/i18n'
 
+export type Locale = 'fr-FR' | 'en-GB'
+
 const i18n = createI18n({
   locale: 'fr-FR',
   fallbackLocale: 'en-GB',
