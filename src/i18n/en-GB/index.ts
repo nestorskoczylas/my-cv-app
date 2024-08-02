@@ -1,4 +1,7 @@
 export default {
-  failed: 'Action failed',
-  success: 'Action was successful',
+  fullName: 'Nestor Skoczylas',
+  jobTitle: 'C# .Net VueJS Design and Development Engineer',
+  AboutMe: 'About Me',
+  CV: 'Resume',
+  Projects: 'Projects',
 }
