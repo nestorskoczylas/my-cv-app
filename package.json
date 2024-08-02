@@ -2,8 +2,8 @@
   "name": "my-cv-app",
   "version": "0.0.1",
   "description": "my-cv-app",
-  "productName": "my-cv-app",
-  "author": "Nestor",
+  "productName": "Nestor Skoczylas",
+  "author": "Nestor Skoczylas",
   "private": true,
   "scripts": {
     "lint": "eslint --ext .js,.ts,.vue ./",
