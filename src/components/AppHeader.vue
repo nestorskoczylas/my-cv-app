@@ -6,8 +6,8 @@
           <div class="decorative-element"></div>
           <span class="name">{{ $t('fullName') }}</span>
         </div>
-        <div class="position-info">
-          <span class="separator">/</span>
+        <div :class="['position-info', { 'mobile-position-info': isSmallScreen }]">
+          <span v-if="!isSmallScreen" class="separator">/</span>
           <span class="position">{{ $t('jobTitle') }}</span>
         </div>
       </div>
@@ -162,16 +162,18 @@ onUnmounted(() => {
 .left-section {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .name-section {
   display: flex;
   align-items: center;
+  margin-bottom: 2px;
 }
 
 .decorative-element {
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   background-color: blue;
   margin-right: 10px;
 }
@@ -190,6 +192,14 @@ onUnmounted(() => {
 .position-info {
   text-transform: uppercase;
   margin-left: 10px;
+}
+
+.mobile-position-info {
+  margin-top: 1rem;
+}
+
+.mobile-position-info span {
+  font-size: 1rem;
 }
 
 .separator {
