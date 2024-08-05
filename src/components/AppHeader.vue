@@ -1,19 +1,27 @@
 <template>
+  <!-- begin:: Header Component -->
   <q-header bordered class="bg-white text-black">
     <q-toolbar class="q-pa-md">
+      <!-- begin:: Left Section: Name and Position -->
       <div class="left-section">
+        <!-- begin:: Name Section -->
         <div class="name-section">
           <div class="decorative-element"></div>
           <span class="name">{{ $t('fullName') }}</span>
         </div>
+        <!-- end:: Name Section -->
+
+        <!-- begin:: Position Info: Job Title with separator -->
         <div :class="['position-info', { 'mobile-position-info': isSmallScreen }]">
           <span v-if="!isSmallScreen" class="separator">/</span>
           <span class="position">{{ $t('jobTitle') }}</span>
         </div>
+        <!-- end:: Position Info: Job Title with separator -->
       </div>
 
-      <!-- begin:: Button menu -->
+      <!-- begin:: Right Section: Navigation and Language Selector -->
       <q-toolbar-title class="right-section">
+        <!-- begin:: Navigation Buttons -->
         <q-btn
           :class="{ 'active-btn': isActive('home') }"
           flat
@@ -32,6 +40,8 @@
           :label="$t('Projects')"
           @click="goTo('projects')"
         />
+        <!-- end:: Navigation Buttons -->
+
         <!-- begin:: Language Selector -->
         <div class="language-selector">
           <q-btn flat @click="changeLanguage('fr-FR')" class="lang-btn">
@@ -43,9 +53,9 @@
         </div>
         <!-- end:: Language Selector -->
       </q-toolbar-title>
-      <!-- end:: Button menu -->
+      <!-- end:: Right Section: Navigation and Language Selector -->
 
-      <!-- begin:: Mobile menu -->
+      <!-- begin:: Mobile Menu Button -->
       <q-btn
         flat
         icon="menu"
@@ -53,11 +63,11 @@
         @click="toggleMenu"
         v-if="isSmallScreen"
       />
-      <!-- end:: Mobile menu -->
+      <!-- end:: Mobile Menu Button -->
     </q-toolbar>
   </q-header>
 
-  <!-- begin:: Mobile menu -->
+  <!-- begin:: Mobile Drawer Menu -->
   <q-drawer
     v-model="menu"
     side="right"
@@ -66,6 +76,7 @@
     class="full-width-drawer bg-white text-black"
     content-class="q-pa-md"
   >
+    <!-- begin:: Drawer Header with Close Button -->
     <div class="drawer-header">
       <q-btn
         flat
@@ -74,6 +85,9 @@
         class="drawer-close-btn"
       />
     </div>
+    <!-- end:: Drawer Header with Close Button -->
+
+    <!-- begin:: Drawer Navigation List -->
     <q-list class="drawer-list">
       <q-item clickable @click="goTo('home')">
         <q-item-section>{{ $t('AboutMe') }}</q-item-section>
@@ -94,6 +108,8 @@
         </q-item-section>
       </q-item>
       <q-separator />
+
+      <!-- begin:: Language Selector -->
       <div class="flex justify-around" style="margin-top: 1rem;">
         <q-item clickable @click="changeLanguage('fr-FR')">
           <q-item-section class="lang-btn-mobile">
@@ -106,9 +122,12 @@
           </q-item-section>
         </q-item>
       </div>
+      <!-- end:: Language Selector -->
+
     </q-list>
+    <!-- end:: Drawer Navigation List -->
   </q-drawer>
-  <!-- end:: Mobile menu -->
+  <!-- end:: Mobile Drawer Menu -->
 </template>
 
 <script lang="ts" setup>
@@ -117,32 +136,41 @@ import { useRouter, useRoute } from 'vue-router'
 import { useI18n } from 'src/boot/i18n'
 import type { Locale } from 'src/i18n'
 
+// Vue Router and I18n hooks
 const router = useRouter()
 const route = useRoute()
 const { locale } = useI18n()
+
+// State variables
 const menu = ref(false)
 const isSmallScreen = ref(false)
 
+// Function to navigate to a specific route
 const goTo = (path: string) => {
   router.push({ name: path })
 }
 
+// Function to check if a route is active
 const isActive = (name: string) => {
   return route.name === name
 }
 
+// Function to change the language
 const changeLanguage = (lang: Locale) => {
   locale.value = lang
 }
 
+// Function to toggle the mobile menu
 const toggleMenu = () => {
   menu.value = !menu.value
 }
 
+// Function to check if the screen size is small
 const checkScreenSize = () => {
   isSmallScreen.value = window.innerWidth < 600
 }
 
+// Lifecycle hooks to manage event listeners for screen size
 onMounted(() => {
   checkScreenSize()
   window.addEventListener('resize', checkScreenSize)
@@ -154,11 +182,13 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
+/* Header Styles */
 .q-header {
   padding-top: 10px;
   padding-bottom: 10px;
 }
 
+/* Left Section Styles: Name and Position */
 .left-section {
   display: flex;
   align-items: center;
@@ -216,6 +246,7 @@ onUnmounted(() => {
   line-height: 1;
 }
 
+/* Right Section Styles: Navigation and Language Selector */
 .right-section {
   display: flex;
   justify-content: flex-end;
