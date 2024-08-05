@@ -5,4 +5,5 @@ export default {
   CV: 'CV',
   Projects: 'Projets',
   license: 'Permis B',
+  MoreInfo: 'Plus d’informations',
 }
