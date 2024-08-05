@@ -49,7 +49,7 @@
       <q-btn
         flat
         icon="menu"
-        class="q-mr-sm q-d-none q-d-md-block"
+        class="q-mr-sm q-d-none q-d-md-block burger-menu-btn"
         @click="toggleMenu"
         v-if="isSmallScreen"
       />
@@ -256,9 +256,10 @@ onUnmounted(() => {
 }
 
 /* Drawer Styles */
-.full-width-drawer {
-  width: 100%;
-  max-width: 100%;
+.burger-menu-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 
 .drawer-header {
