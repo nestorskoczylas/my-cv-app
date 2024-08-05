@@ -4,4 +4,5 @@ export default {
   AboutMe: 'About Me',
   CV: 'Resume',
   Projects: 'Projects',
+  license: 'Driving License B',
 }
