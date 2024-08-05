@@ -2,13 +2,13 @@
   <q-header bordered class="bg-white text-black">
     <q-toolbar class="q-pa-md">
       <div class="left-section">
-        <div class="decorative-element"></div>
-        <div class="header-info">
+        <div class="name-section">
+          <div class="decorative-element"></div>
           <span class="name">{{ $t('fullName') }}</span>
-          <div class="position-info">
-            <span class="separator">/</span>
-            <span class="position">{{ $t('jobTitle') }}</span>
-          </div>
+        </div>
+        <div class="position-info">
+          <span class="separator">/</span>
+          <span class="position">{{ $t('jobTitle') }}</span>
         </div>
       </div>
       <q-toolbar-title class="right-section">
@@ -73,6 +73,11 @@ const changeLanguage = (lang: Locale) => {
 }
 
 .left-section {
+  display: flex;
+  align-items: center;
+}
+
+.name-section {
   display: flex;
   align-items: center;
 }
