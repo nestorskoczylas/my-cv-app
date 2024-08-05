@@ -2,20 +2,27 @@
   <q-footer bordered class="bg-white text-black">
     <q-toolbar class="q-pa-md">
       <div class="footer-content">
-        <!-- Accordion Menu for Mobile -->
+        <!-- begin:: Accordion Menu for Mobile -->
         <q-expansion-item
           v-if="isSmallScreen"
           class="footer-accordion"
           :label="$t('MoreInfo')"
         >
+          <!-- begin:: Footer Content for Mobile -->
           <div class="footer-accordion-content">
+            <!-- begin:: Left Section: CopyRight -->
             <div class="footer-left">
               <span>&copy; {{ currentYear }} {{ $t('fullName') }}</span>
             </div>
+            <!-- end:: Left Section: CopyRight -->
+
+            <!-- begin:: Right Section: Contact Info and Social Links -->
             <div class="footer-right">
               <span>{{ $t('license') }}</span>
               <span>(+33) 7 83 59 04 23</span>
               <span>nestor.skoczylas23@gmail.com</span>
+
+              <!-- begin:: Social Links -->
               <div>
                 <q-btn flat @click="openLink('https://github.com/nestorskoczylas')" class="social-btn">
                   <img src="/src/assets/github.png" alt="GitHub" />
@@ -24,15 +31,22 @@
                   <img src="/src/assets/linkedin.png" alt="LinkedIn" />
                 </q-btn>
               </div>
+              <!-- end:: Social Links -->
             </div>
+            <!-- end:: Right Section: Contact Info and Social Links -->
           </div>
         </q-expansion-item>
+        <!-- end:: Accordion Menu for Mobile -->
 
-        <!-- Footer Content for Desktop -->
+        <!-- begin:: Footer Content for Desktop -->
         <div v-else class="footer-desktop">
+          <!-- begin:: Left Section: CopyRight -->
           <div class="footer-left">
             <span>&copy; {{ currentYear }} {{ $t('fullName') }}</span>
           </div>
+          <!-- end:: Left Section: CopyRight -->
+
+          <!-- begin:: Right Section: Contact Info and Social Links -->
           <div class="footer-right">
             <span>{{ $t('license') }}</span>
             <span>(+33) 7 83 59 04 23</span>
@@ -44,7 +58,9 @@
               <img src="/src/assets/linkedin.png" alt="LinkedIn" />
             </q-btn>
           </div>
+          <!-- end:: Right Section: Contact Info and Social Links -->
         </div>
+        <!-- end:: Footer Content for Desktop -->
       </div>
     </q-toolbar>
   </q-footer>
@@ -56,14 +72,17 @@ import { ref, onMounted, onUnmounted } from 'vue'
 const currentYear = ref(new Date().getFullYear())
 const isSmallScreen = ref(false)
 
+// Open a link in a new tab
 const openLink = (url: string) => {
   window.open(url, '_blank')
 }
 
+// Check if the screen size is small
 const checkScreenSize = () => {
   isSmallScreen.value = window.innerWidth < 600
 }
 
+// Lifecycle hooks to manage event listeners for screen size
 onMounted(() => {
   checkScreenSize()
   window.addEventListener('resize', checkScreenSize)
