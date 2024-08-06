@@ -186,8 +186,7 @@ onUnmounted(() => {
 <style scoped>
 /* Header Styles */
 .q-header {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 1rem 0;
 }
 
 /* Left Section Styles: Name and Position */
@@ -195,6 +194,7 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  padding-left: 1.5rem;
 }
 
 .name-section {
