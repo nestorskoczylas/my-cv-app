@@ -8,7 +8,7 @@
 
     <!-- Card -->
     <q-card class="main-card">
-      <div class="left-section-profile">
+      <div class="profile-info">
         <div class="photo-container">
           <img src="/src/assets/personal.png" alt="Photo" class="photo" />
         </div>
@@ -34,8 +34,8 @@
       <div class="greeting">{{ $t('greeting') }}</div>
       <div class="intro">{{ $t('intro') }}</div>
       <div class="buttons">
-        <q-btn flat :label="$t('CV')" @click="goTo('cv')" />
-        <q-btn flat :label="$t('Projects')" @click="goTo('projects')" />
+        <q-btn outline rounded color="blue" :label="$t('CV')" @click="goTo('cv')" />
+        <q-btn unelevated rounded color="blue" :label="$t('Projects')" @click="goTo('projects')" />
       </div>
       <div class="description">
         {{ $t('description') }}
@@ -69,6 +69,7 @@ const openLink = (url: string) => {
   overflow-y: auto;
 }
 
+/* Background Styles */
 .background {
   position: absolute;
   top: 0;
@@ -91,6 +92,7 @@ const openLink = (url: string) => {
   height: 100%;
 }
 
+/* Card Styles */
 .main-card {
   display: flex;
   flex-direction: column;
@@ -99,7 +101,8 @@ const openLink = (url: string) => {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.left-section-profile {
+/* Profile Info Styles */
+.profile-info {
   background-color: $beige;
   padding: 20px;
   display: flex;
@@ -145,9 +148,9 @@ const openLink = (url: string) => {
   letter-spacing: 0.1rem;
 }
 
+/* Social Footer Styles */
 .social-footer {
   padding: 10px 20px;
-  width: 100%;
   background-color: white;
   display: flex;
   justify-content: center;
@@ -169,36 +172,46 @@ const openLink = (url: string) => {
   opacity: 0.8;
 }
 
+/* Right Section Styles */
 .right-section {
-  background-color: white;
-  width: 40%;
-  padding: 20px;
+  width: 25%;
+  padding: 40px;
   display: flex;
   flex-direction: column;
 }
 
 .greeting {
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 6.25rem;
   margin-bottom: 10px;
 }
 
 .intro {
-  font-weight: bold;
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-}
-
-.buttons {
-  margin-bottom: 20px;
-}
-
-.buttons .q-btn {
-  margin-right: 10px;
+  font-size: 1.8rem;
+  margin-bottom: 40px;
 }
 
 .description {
   font-size: 1rem;
+  font-weight: 300;
   line-height: 1.6;
+}
+
+/* Buttons Styles */
+.buttons {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.buttons .q-btn {
+  margin-right: 10px;
+  width: 40%;
+}
+
+.buttons .q-btn:hover, .buttons .q-btn:focus {
+  color: white;
+  background-color: blue;
+  opacity: 0.8;  
 }
 </style>

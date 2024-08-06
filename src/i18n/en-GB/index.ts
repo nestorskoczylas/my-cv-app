@@ -1,7 +1,7 @@
 export default {
   fullName: 'Nestor Skoczylas',
   firstName: 'Nestor',
-  lastName: 'Skoczylas',
+  lastName: 'SKOCZYLAS',
   jobTitle: 'C# .Net VueJS Design and Development Engineer',
   AboutMe: 'About Me',
   CV: 'Resume',
