@@ -119,17 +119,6 @@ onUnmounted(() => {
   align-items: flex-start;
 }
 
-.social-btn img {
-  width: 1.6rem;
-  height: 1.6rem;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.social-btn img:hover {
-  transform: scale(1.1);
-  opacity: 0.8;
-}
-
 /* Media Query for Small Screens */
 @media (max-width: 599px) {
   .footer-desktop {

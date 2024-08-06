@@ -21,10 +21,10 @@
       </div>
       <div class="social-footer">
         <q-btn flat @click="openLink('https://github.com/nestorskoczylas')" class="social-btn">
-          <img src="/src/assets/github.png" alt="GitHub" class="social-icon" />
+          <img src="/src/assets/github.png" alt="GitHub" />
         </q-btn>
         <q-btn flat @click="openLink('https://linkedin.com/in/nestorskoczylas')" class="social-btn">
-          <img src="/src/assets/linkedin.png" alt="LinkedIn" class="social-icon" />
+          <img src="/src/assets/linkedin.png" alt="LinkedIn" />
         </q-btn>
       </div>
     </q-card>
@@ -154,22 +154,6 @@ const openLink = (url: string) => {
   background-color: white;
   display: flex;
   justify-content: center;
-}
-
-.social-btn {
-  padding: 0;
-  margin: 0 10px;
-}
-
-.social-icon {
-  width: 24px;
-  height: 24px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.social-btn:hover .social-icon {
-  transform: scale(1.1);
-  opacity: 0.8;
 }
 
 /* Right Section Styles */
