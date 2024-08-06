@@ -76,6 +76,28 @@
         :descriptionTitle="personalExperience.descriptionTitle"
         :descriptions="personalExperience.descriptions"
       />
+
+      <!-- Section for Title -->
+      <div class="title-container">
+        <div class="decorative-element"></div>
+        <h4>Compétences</h4>
+      </div>
+
+      <!-- Skills Cards -->
+      <SkillCard
+        :skills="skills"
+      />
+
+      <!-- Section for Title -->
+      <div class="title-container">
+        <div class="decorative-element"></div>
+        <h4>Qualités</h4>
+      </div>
+
+      <!-- Qualities Cards -->
+      <SkillCard
+        :skills="qualities"
+      />
     </div>
   </div>
 </template>
@@ -83,6 +105,7 @@
 <script lang="ts" setup>
 import ExperienceCard from '../components/ExperienceCard.vue'
 import EducationCard from '../components/EducationCard.vue'
+import SkillCard from '../components/SkillCard.vue'
 
 const experiences = [
   {
@@ -239,6 +262,40 @@ const personalExperiences = [
       'Résolution de conflits entre les enfants et gestion des problèmes d\'urgence',
       'Participation à des événements communautaires et projets de volontariat'
     ]
+  }
+]
+
+const skills = [
+  {
+    title: 'Langages de programmation',
+    description: 'C#, VB.NET, JavaScript, TypeScript, SQL, Java, Script Shell, Batch'
+  },
+  {
+    title: 'Technologies Web',
+    description: 'ASP.NET Core, ASP.NET MVC, ASP.NET Web API, Blazor, HTML, CSS, Bootstrap, React, Vue.js'
+  },
+  {
+    title: 'Outil de gestion de versions',
+    description: 'Git, GitHub, GitLab'
+  },
+  {
+    title: 'Environnement de développement',
+    description: 'Visual Studio, Visual Studio Code, SQL Server Management Studio, Postman, Rider, IntelliJ IDEA'
+  },
+  {
+    title: 'Outils de gestion de projet',
+    description: 'Azure DevOps, Trello'
+  }
+]
+
+const qualities = [
+  {
+    title: 'Professionnelles',
+    description: 'Rigueur, Motivation, Capacité d’adaptation'
+  },
+  {
+    title: 'Humaines',
+    description: 'Capacité d’écoute, Volontaire, Conciliant'
   }
 ]
 </script>
