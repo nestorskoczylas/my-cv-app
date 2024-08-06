@@ -1,5 +1,7 @@
 export default {
   fullName: 'Nestor Skoczylas',
+  firstName: 'Nestor',
+  lastName: 'Skoczylas',
   jobTitle: 'Ingénieur d’études et développement C# .Net VueJS',
   AboutMe: 'À propos de moi',
   CV: 'CV',

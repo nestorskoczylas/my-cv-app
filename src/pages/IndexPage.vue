@@ -7,40 +7,40 @@
     </div>
 
     <!-- Card -->
-    <q-card class="main-card" bordered>
-      <q-card-section class="card-content">
-        <!-- Left Section -->
-        <div class="left-section">
-          <div class="photo-container">
-            <img src="/src/assets/personal.png" alt="Photo" class="photo" />
-          </div>
-          <div class="name">{{ $t('fullName') }}</div>
-          <div class="blue-line"></div>
-          <div class="job-title">{{ $t('jobTitle') }}</div>
-          <div class="social-footer">
-            <q-btn flat @click="openLink('https://github.com/nestorskoczylas')" class="social-btn">
-              <img src="/src/assets/github.png" alt="GitHub" class="social-icon" />
-            </q-btn>
-            <q-btn flat @click="openLink('https://linkedin.com/in/nestorskoczylas')" class="social-btn">
-              <img src="/src/assets/linkedin.png" alt="LinkedIn" class="social-icon" />
-            </q-btn>
-          </div>
+    <q-card class="main-card">
+      <div class="left-section-profile">
+        <div class="photo-container">
+          <img src="/src/assets/personal.png" alt="Photo" class="photo" />
         </div>
-
-        <!-- Right Section -->
-        <div class="right-section">
-          <div class="greeting">{{ $t('greeting') }}</div>
-          <div class="intro">{{ $t('intro') }}</div>
-          <div class="buttons">
-            <q-btn flat :label="$t('CV')" @click="goTo('cv')" />
-            <q-btn flat :label="$t('Projects')" @click="goTo('projects')" />
-          </div>
-          <div class="description">
-            {{ $t('description') }}
-          </div>
+        <div class="name">
+          <div>{{ $t('firstName') }}</div>
+          <div>{{ $t('lastName') }}</div>
         </div>
-      </q-card-section>
+        <div class="blue-line"></div>
+        <div class="job-title">{{ $t('jobTitle') }}</div>
+      </div>
+      <div class="social-footer">
+        <q-btn flat @click="openLink('https://github.com/nestorskoczylas')" class="social-btn">
+          <img src="/src/assets/github.png" alt="GitHub" class="social-icon" />
+        </q-btn>
+        <q-btn flat @click="openLink('https://linkedin.com/in/nestorskoczylas')" class="social-btn">
+          <img src="/src/assets/linkedin.png" alt="LinkedIn" class="social-icon" />
+        </q-btn>
+      </div>
     </q-card>
+
+    <!-- Right Section -->
+    <div class="right-section">
+      <div class="greeting">{{ $t('greeting') }}</div>
+      <div class="intro">{{ $t('intro') }}</div>
+      <div class="buttons">
+        <q-btn flat :label="$t('CV')" @click="goTo('cv')" />
+        <q-btn flat :label="$t('Projects')" @click="goTo('projects')" />
+      </div>
+      <div class="description">
+        {{ $t('description') }}
+      </div>
+    </div>
   </div>
 </template>
 
@@ -81,31 +81,26 @@ const openLink = (url: string) => {
 
 .background-left {
   background-color: $dark-beige;
-  width: 33%;
+  width: 40%;
   height: 100%;
 }
 
 .background-right {
   background-color: white;
-  width: 67%;
+  width: 60%;
   height: 100%;
 }
 
 .main-card {
   display: flex;
-  width: 90%;
-  max-width: 1200px;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.card-content {
-  display: flex;
-  width: 100%;
-}
-
-.left-section {
+.left-section-profile {
   background-color: $beige;
-  width: 40%;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -113,12 +108,13 @@ const openLink = (url: string) => {
 }
 
 .photo-container {
-  width: 120px;
-  height: 120px;
+  margin-top: 20px;
+  width: 205px;
+  height: 205px;
   border-radius: 50%;
   background-color: white;
   overflow: hidden;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .photo {
@@ -128,27 +124,33 @@ const openLink = (url: string) => {
 }
 
 .name {
+  text-align: center;
   font-weight: bold;
   font-size: 1.6rem;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
 }
 
 .blue-line {
   width: 25%;
   height: 0.2rem;
   background-color: blue;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
 }
 
 .job-title {
+  font-weight: 300;
+  text-align: center;
   font-size: 1.2rem;
   color: #333;
+  letter-spacing: 0.1rem;
 }
 
 .social-footer {
+  padding: 10px 20px;
+  width: 100%;
+  background-color: white;
   display: flex;
   justify-content: center;
-  margin-top: 20px;
 }
 
 .social-btn {
@@ -159,6 +161,12 @@ const openLink = (url: string) => {
 .social-icon {
   width: 24px;
   height: 24px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-btn:hover .social-icon {
+  transform: scale(1.1);
+  opacity: 0.8;
 }
 
 .right-section {
