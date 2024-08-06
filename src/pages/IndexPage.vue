@@ -20,12 +20,7 @@
         <div class="job-title">{{ $t('jobTitle') }}</div>
       </div>
       <div class="social-footer">
-        <q-btn flat @click="openLink('https://github.com/nestorskoczylas')" class="social-btn">
-          <img src="../assets/github.png" alt="GitHub" />
-        </q-btn>
-        <q-btn flat @click="openLink('https://linkedin.com/in/nestorskoczylas')" class="social-btn">
-          <img src="../assets/linkedin.png" alt="LinkedIn" />
-        </q-btn>
+        <SocialButtons />
       </div>
     </q-card>
 
@@ -46,15 +41,12 @@
 
 <script lang="ts" setup>
 import { useRouter } from 'vue-router'
+import SocialButtons from '../components/SocialButtons.vue'
 
 const router = useRouter()
 
 const goTo = (path: string) => {
   router.push({ name: path })
-}
-
-const openLink = (url: string) => {
-  window.open(url, '_blank')
 }
 </script>
 
