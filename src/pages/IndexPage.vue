@@ -205,25 +205,25 @@ const openLink = (url: string) => {
 /* Responsive Styles */
 @media (max-width: 768px) {
   .index-page {
-    flex-direction: column; /* Stack card and text vertically */
-    align-items: center; /* Center horizontally */
+    flex-direction: column;
+    align-items: center;
   }
 
   .background {
-    flex-direction: column; /* Stack background vertically */
+    flex-direction: column;
   }
 
   .background-left, .background-right {
     width: 100%;
-    height: 50%; /* Adjust heights for stacked background */
+    height: 50%;
   }
 
   .background-left {
-    background-color: white; /* Move white background first */
+    background-color: white;
   }
 
   .background-right {
-    background-color: $dark-beige; /* Move beige background second */
+    background-color: $dark-beige;
   }
 
   .main-card {
