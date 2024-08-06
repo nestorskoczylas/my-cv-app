@@ -2,40 +2,23 @@
   <div class="cv-page">
     <div class="cv-background">
       <!-- Section for Title -->
-      <h1>Expériences Professionnelles</h1>
+      <div class="title-container">
+        <div class="decorative-element"></div>
+        <h4>Expériences Professionnelles</h4>
+      </div>
 
       <!-- Experience Cards -->
       <ExperienceCard
-        year="Septembre 2022 - 2024"
-        title="Développeur FullStack - Alternance"
-        entity="Opalean"
-        location="Lille, France"
-        detailTitle="Compétences"
-        details="C#, VB.NET, SQL Server, Vue.js"
-        descriptionTitle="Missions"
-        descriptions="Développement d’une application CRM pour la gestion des profils clients (C#), Ajout de nouvelles routes à une API existante (VB.Net), Création d’un prototype de drag-and-drop pour les fichiers CSV et XLS (Vue2.js), Migration d’une API existante de VB.Net à C#"
-      />
-
-      <ExperienceCard
-        year="Avril - Juillet 2022"
-        title="Développeur Web - Stage"
-        entity="Vallourec Tubes France"
-        location="Aulnoye-Aymeries, France"
-        detailTitle="Compétences"
-        details="React, TypeScript, Cypress, Méthodologie Agile Scrum"
-        descriptionTitle="Missions"
-        descriptions="Développement d'une application web basée sur React, Refonte du design et de l'interface utilisateur d'un CRM de gestion d'inventaire, Participation aux rituels Agile de l'équipe de développement, Contribution à l'analyse technique de la solution, Rédaction de tests fonctionnels et unitaires"
-      />
-
-      <ExperienceCard
-        year="2022 - Aujourd'hui"
-        title="Pyrotechnicien"
-        entity="Wagnon Artifices"
-        location="Haut de France, France"
-        detailTitle="Compétences"
-        details="Rigueur, Autonomie, Respect des consignes de sécurité, Créativité"
-        descriptionTitle="Missions"
-        descriptions="Préparation, installation et manipulation des feux d'artifices en veillant à la sécurité du public et du personnel, Prise en charge individuelle de tâches spécifiques liées à la mise en place et au déclenchement des feux d'artifices, Application stricte des procédures de sécurité et des réglementations en vigueur lors de la manipulation des feux d'artifices"
+      v-for="(experience, index) in experiences"
+      :key="index"
+      :year="experience.year"
+      :title="experience.title"
+      :entity="experience.entity"
+      :location="experience.location"
+      :detailTitle="experience.detailTitle"
+      :details="experience.details"
+      :descriptionTitle="experience.descriptionTitle"
+      :descriptions="experience.descriptions"
       />
     </div>
   </div>
@@ -43,12 +26,75 @@
 
 <script lang="ts" setup>
 import ExperienceCard from '../components/ExperienceCard.vue'
+
+const experiences = [
+  {
+    year: 'Septembre 2022 - 2024',
+    title: 'Développeur FullStack - Alternance',
+    entity: 'Opalean',
+    location: 'Lille, France',
+    detailTitle: 'Compétences',
+    details: [
+      'C#',
+      'VB.NET',
+      'SQL Server',
+      'Vue.js'
+    ],
+    descriptionTitle: 'Missions',
+    descriptions: [
+      'Développement d’une application CRM pour la gestion des profils clients (C#)',
+      'Ajout de nouvelles routes à une API existante (VB.Net)',
+      'Création d’un prototype de drag-and-drop pour les fichiers CSV et XLS (Vue2.js)',
+      'Migration d’une API existante de VB.Net à C#'
+    ]
+  },
+  {
+    year: 'Avril - Juillet 2022',
+    title: 'Développeur Web - Stage',
+    entity: 'Vallourec Tubes France',
+    location: 'Aulnoye-Aymeries, France',
+    detailTitle: 'Compétences',
+    details: [
+      'React',
+      'TypeScript',
+      'Cypress',
+      'Méthodologie Agile Scrum'
+    ],
+    descriptionTitle: 'Missions',
+    descriptions: [
+      'Développement d\'une application web basée sur React',
+      'Refonte du design et de l\'interface utilisateur d\'un CRM de gestion d\'inventaire',
+      'Participation aux rituels Agile de l\'équipe de développement',
+      'Contribution à l\'analyse technique de la solution',
+      'Rédaction de tests fonctionnels et unitaires'
+    ]
+  },
+  {
+    year: '2022 - Aujourd\'hui',
+    title: 'Pyrotechnicien',
+    entity: 'Wagnon Artifices',
+    location: 'Haut de France, France',
+    detailTitle: 'Compétences',
+    details: [
+      'Rigueur',
+      'Autonomie',
+      'Respect des consignes de sécurité',
+      'Créativité'
+    ],
+    descriptionTitle: 'Missions',
+    descriptions: [
+      'Préparation, installation et manipulation des feux d\'artifices en veillant à la sécurité du public et du personnel',
+      'Prise en charge individuelle de tâches spécifiques liées à la mise en place et au déclenchement des feux d\'artifices',
+      'Application stricte des procédures de sécurité et des réglementations en vigueur lors de la manipulation des feux d\'artifices'
+    ]
+  }
+]
 </script>
 
 <style scoped lang="scss">
 .cv-page {
   background-color: $dark-beige;
-  padding: 20px;
+  padding: 1.25rem;
   min-height: 100vh;
 }
 
@@ -57,10 +103,20 @@ import ExperienceCard from '../components/ExperienceCard.vue'
   margin: 0 auto;
 }
 
-h1 {
-  text-align: center;
-  font-size: 2.5rem;
-  color: white;
-  margin-bottom: 40px;
+/* Title and Decorative Element */
+.title-container {
+  display: flex;
+  align-items: center;
+}
+
+.title-container h4 {
+  font-weight: bold;
+}
+
+.decorative-element {
+  width: 15px;
+  height: 15px;
+  background-color: blue;
+  margin-right: 15px;
 }
 </style>
