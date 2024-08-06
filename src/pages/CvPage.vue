@@ -56,6 +56,26 @@
         :descriptionTitle="formation.descriptionTitle"
         :descriptions="formation.descriptions"
       />
+
+      <!-- Section for Title -->
+      <div class="title-container">
+        <div class="decorative-element"></div>
+        <h4>Expériences Personnelles</h4>
+      </div>
+
+      <!-- Personal Experiences Cards -->
+      <ExperienceCard
+        v-for="(personalExperience, index) in personalExperiences"
+        :key="index"
+        :year="personalExperience.year"
+        :title="personalExperience.title"
+        :entity="personalExperience.entity"
+        :location="personalExperience.location"
+        :detailTitle="personalExperience.detailTitle"
+        :details="personalExperience.details"
+        :descriptionTitle="personalExperience.descriptionTitle"
+        :descriptions="personalExperience.descriptions"
+      />
     </div>
   </div>
 </template>
@@ -177,6 +197,47 @@ const formations = [
       'Formation pratique et théorique pour développer des techniques d\'animation adaptées à différents publics',
       'Apprentissage des bases légales et des responsabilités liées à l\'encadrement de groupes de jeunes',
       'Réalisation et mise en pratique de projets d\'animation favorisant la créativité et l\'interaction sociale'
+    ]
+  }
+]
+
+const personalExperiences = [
+  {
+    year: '2006 - Aujourd\'hui',
+    title: 'Adhérent - Animateur',
+    entity: 'Eclaireuses et Eclaireurs de France',
+    location: 'Villeneuve d\'Ascq, France',
+    detailTitle: 'Compétences',
+    details: [
+      'Gestion de projet',
+      'Animation',
+      'Formation'
+    ],
+    descriptionTitle: 'Missions',
+    descriptions: [
+      'Organisation et animation de réunions hebdomadaires pour les jeunes membres',
+      'Planification et organisation de week-ends et camps de formation en plein air',
+      'Formateur pour les jeunes sur divers sujets liés au scoutisme et à la vie en plein air',
+      'Participation à des formations continues pour améliorer les compétences d\'animation et de leadership'
+    ]
+  },
+  {
+    year: 'Août 2018 - Décembre 2021',
+    title: 'Animateur',
+    entity: 'Mairie',
+    location: 'Villeneuve d\'Ascq, France',
+    detailTitle: 'Compétences',
+    details: [
+      'Gestion de groupe',
+      'Gestion du stress',
+      'Volontariat'
+    ],
+    descriptionTitle: 'Missions',
+    descriptions: [
+      'Encadrement quotidien et activités récréatives pour les enfants de la ville',
+      'Planification et organisation d\'activités éducatives et récréatives',
+      'Résolution de conflits entre les enfants et gestion des problèmes d\'urgence',
+      'Participation à des événements communautaires et projets de volontariat'
     ]
   }
 ]
