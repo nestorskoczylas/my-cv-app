@@ -20,12 +20,31 @@
       :descriptionTitle="experience.descriptionTitle"
       :descriptions="experience.descriptions"
       />
+
+      <!-- Section for Title -->
+      <div class="title-container">
+        <div class="decorative-element"></div>
+        <h4>Diplômes</h4>
+      </div>
+
+      <!-- Education Cards -->
+      <EducationCard
+        v-for="(education, index) in educations"
+        :key="index"
+        :year="education.year"
+        :title="education.title"
+        :entity="education.entity"
+        :location="education.location"
+        :descriptionTitle="education.descriptionTitle"
+        :descriptions="education.descriptions"
+      />
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
 import ExperienceCard from '../components/ExperienceCard.vue'
+import EducationCard from '../components/EducationCard.vue'
 
 const experiences = [
   {
@@ -86,6 +105,33 @@ const experiences = [
       'Préparation, installation et manipulation des feux d\'artifices en veillant à la sécurité du public et du personnel',
       'Prise en charge individuelle de tâches spécifiques liées à la mise en place et au déclenchement des feux d\'artifices',
       'Application stricte des procédures de sécurité et des réglementations en vigueur lors de la manipulation des feux d\'artifices'
+    ]
+  }
+]
+
+const educations = [
+  {
+    year: 'Septembre 2022 - 2024',
+    title: 'Master Informatique Mention E-Services',
+    entity: 'Université de Lille',
+    location: 'Lille, France',
+    descriptionTitle: 'Descriptions',
+    descriptions: [
+      'Concentration sur la conception et le développement de services numériques accessibles via divers moyens de communication numérique',
+      'Compétences opérationnelles en conception de services numériques, interfaces homme-machine, gestion de projets et design applicatif',
+      'Projet Platine : Développement de projets complets allant de la conception à la réalisation et à la promotion, en mettant l\'accent sur les aspects utilisateurs, usages, IHM, UX, et l\'innovation technologique'
+    ]
+  },
+  {
+    year: 'Septembre 2019 - 2022',
+    title: 'Licence Informatique',
+    entity: 'Université de Lille',
+    location: 'Lille, France',
+    descriptionTitle: 'Descriptions',
+    descriptions: [
+      'Formation complète en informatique avec un enseignement théorique et appliqué',
+      'Développement de compétences professionnelles avancées et transversales',
+      'Préparation efficace pour des masters spécialisés et insertion professionnelle dans divers secteurs'
     ]
   }
 ]
