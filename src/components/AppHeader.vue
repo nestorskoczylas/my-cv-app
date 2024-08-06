@@ -153,7 +153,7 @@ const goTo = (path: string) => {
 
 // Function to check if a route is active
 const isActive = (name: string) => {
-  return route.name === name
+  return route.name === name || (route.name === undefined && name === 'home')
 }
 
 // Function to change the language
