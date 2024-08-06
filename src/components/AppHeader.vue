@@ -20,7 +20,7 @@
       </div>
 
       <!-- begin:: Right Section: Navigation and Language Selector -->
-      <q-toolbar-title class="right-section">
+      <q-toolbar-title class="right-section" v-if="!isMediumScreen">
         <!-- begin:: Navigation Buttons -->
         <q-btn
           :class="{ 'active-btn': isActive('home') }"
@@ -61,7 +61,7 @@
         icon="menu"
         class="q-mr-sm q-d-none q-d-md-block burger-menu-btn"
         @click="toggleMenu"
-        v-if="isSmallScreen"
+        v-if="isSmallScreen || isMediumScreen"
       />
       <!-- end:: Mobile Menu Button -->
     </q-toolbar>
@@ -144,6 +144,7 @@ const { locale } = useI18n()
 // State variables
 const menu = ref(false)
 const isSmallScreen = ref(false)
+const isMediumScreen = ref(false)
 
 // Function to navigate to a specific route
 const goTo = (path: string) => {
@@ -167,7 +168,8 @@ const toggleMenu = () => {
 
 // Function to check if the screen size is small
 const checkScreenSize = () => {
-  isSmallScreen.value = window.innerWidth < 600
+  isSmallScreen.value = window.innerWidth < 600;
+  isMediumScreen.value = window.innerWidth <= 768 || window.innerHeight <= 768;
 }
 
 // Lifecycle hooks to manage event listeners for screen size

@@ -67,6 +67,7 @@ const openLink = (url: string) => {
   padding: 20px;
   box-sizing: border-box;
   overflow-y: auto;
+  flex-direction: row;
 }
 
 /* Background Styles */
@@ -78,6 +79,7 @@ const openLink = (url: string) => {
   height: 100%;
   display: flex;
   z-index: -1;
+  flex-direction: row;
 }
 
 .background-left {
@@ -99,6 +101,7 @@ const openLink = (url: string) => {
   align-items: center;
   width: 20%;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
 /* Profile Info Styles */
@@ -197,5 +200,100 @@ const openLink = (url: string) => {
   color: white;
   background-color: blue;
   opacity: 0.8;  
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .index-page {
+    flex-direction: column; /* Stack card and text vertically */
+    align-items: center; /* Center horizontally */
+  }
+
+  .background {
+    flex-direction: column; /* Stack background vertically */
+  }
+
+  .background-left, .background-right {
+    width: 100%;
+    height: 50%; /* Adjust heights for stacked background */
+  }
+
+  .background-left {
+    background-color: white; /* Move white background first */
+  }
+
+  .background-right {
+    background-color: $dark-beige; /* Move beige background second */
+  }
+
+  .main-card {
+    width: 80%;
+  }
+
+  .right-section {
+    width: 100%;
+    padding: 20px;
+    order: 1;
+  }
+
+  .greeting {
+    font-size: 3rem;
+  }
+
+  .intro {
+    font-size: 1.2rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  .buttons {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-card {
+    width: 90%;
+  }
+
+  .right-section {
+    padding: 20px;
+  }
+
+  .greeting {
+    font-size: 2.5rem;
+  }
+
+  .intro {
+    font-size: 1rem;
+  }
+
+  .description {
+    font-size: 0.8rem;
+  }
+
+  .buttons .q-btn {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .photo-container {
+    width: 150px;
+    height: 150px;
+  }
+
+  .name {
+    font-size: 1.3rem;
+  }
+
+  .blue-line {
+    height: 0.1rem;
+  }
+
+  .job-title {
+    font-size: 1rem;
+  }
 }
 </style>
