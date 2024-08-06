@@ -43,7 +43,9 @@
           <div class="footer-right">
             <span>{{ $t('license') }}</span>
             <span>(+33) 7 83 59 04 23</span>
-            <span>nestor.skoczylas23@gmail.com</span>
+            <span>
+              <a :href="'mailto:' + $t('email')" target="_blank" class="email-link">{{ $t('email') }}</a>
+            </span>
             <SocialButtons />
           </div>
           <!-- end:: Right Section: Contact Info and Social Links -->
@@ -101,6 +103,14 @@ onUnmounted(() => {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+
+.email-link {
+  color: inherit;
+  text-decoration: none;
+}
+.email-link:hover {
+  text-decoration: underline;
 }
 
 /* Media Query for Small Screens */
