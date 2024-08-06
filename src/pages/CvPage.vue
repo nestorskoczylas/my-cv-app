@@ -27,7 +27,7 @@
         <h4>Diplômes</h4>
       </div>
 
-      <!-- Education Cards -->
+      <!-- Diplomas Cards -->
       <EducationCard
         v-for="(education, index) in educations"
         :key="index"
@@ -37,6 +37,24 @@
         :location="education.location"
         :descriptionTitle="education.descriptionTitle"
         :descriptions="education.descriptions"
+      />
+
+      <!-- Section for Title -->
+      <div class="title-container">
+        <div class="decorative-element"></div>
+        <h4>Formations</h4>
+      </div>
+
+      <!-- Formations Cards -->
+      <EducationCard
+        v-for="(formation, index) in formations"
+        :key="index"
+        :year="formation.year"
+        :title="formation.title"
+        :entity="formation.entity"
+        :location="formation.location"
+        :descriptionTitle="formation.descriptionTitle"
+        :descriptions="formation.descriptions"
       />
     </div>
   </div>
@@ -132,6 +150,33 @@ const educations = [
       'Formation complète en informatique avec un enseignement théorique et appliqué',
       'Développement de compétences professionnelles avancées et transversales',
       'Préparation efficace pour des masters spécialisés et insertion professionnelle dans divers secteurs'
+    ]
+  }
+]
+
+const formations = [
+  {
+    year: 'Juin 2019',
+    title: 'Certificat de Qualification Pyrotechnique F4T2',
+    entity: 'Association Nationale Europeenne Instruction Pyrotechnique',
+    location: 'Caudry, France',
+    descriptionTitle: 'Descriptions',
+    descriptions: [
+      'Formation intensive sur les protocoles et les procédures de sécurité en pyrotechnie, assurant une mise en œuvre sans risque des feux d\'artifice',
+      'Apprentissage approfondi des techniques de manipulation et de gestion des explosifs, assurant une expertise dans le domaine pyrotechnique',
+      'Préparation complète pour la planification et l\'exécution de spectacles pyrotechniques spectaculaires, garantissant une expérience immersive et sécurisée pour le public'
+    ]
+  },
+  {
+    year: 'Février 2018 - Mai 2019',
+    title: 'Brevet d\'Aptitude aux Fonctions d\'Animateur',
+    entity: 'Éclaireuses Éclaireurs de France',
+    location: 'Haut de France, France',
+    descriptionTitle: 'Descriptions',
+    descriptions: [
+      'Formation pratique et théorique pour développer des techniques d\'animation adaptées à différents publics',
+      'Apprentissage des bases légales et des responsabilités liées à l\'encadrement de groupes de jeunes',
+      'Réalisation et mise en pratique de projets d\'animation favorisant la créativité et l\'interaction sociale'
     ]
   }
 ]
