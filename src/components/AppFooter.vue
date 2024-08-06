@@ -23,14 +23,7 @@
               <span>nestor.skoczylas23@gmail.com</span>
 
               <!-- begin:: Social Links -->
-              <div>
-                <q-btn flat @click="openLink('https://github.com/nestorskoczylas')" class="social-btn">
-                  <img src="../assets/github.png" alt="GitHub" />
-                </q-btn>
-                <q-btn flat @click="openLink('https://linkedin.com/in/nestorskoczylas')" class="social-btn">
-                  <img src="../assets/linkedin.png" alt="LinkedIn" />
-                </q-btn>
-              </div>
+              <SocialButtons />
               <!-- end:: Social Links -->
             </div>
             <!-- end:: Right Section: Contact Info and Social Links -->
@@ -51,12 +44,7 @@
             <span>{{ $t('license') }}</span>
             <span>(+33) 7 83 59 04 23</span>
             <span>nestor.skoczylas23@gmail.com</span>
-            <q-btn flat @click="openLink('https://github.com/nestorskoczylas')" class="social-btn">
-              <img src="../assets/github.png" alt="GitHub" />
-            </q-btn>
-            <q-btn flat @click="openLink('https://linkedin.com/in/nestorskoczylas')" class="social-btn">
-              <img src="../assets/linkedin.png" alt="LinkedIn" />
-            </q-btn>
+            <SocialButtons />
           </div>
           <!-- end:: Right Section: Contact Info and Social Links -->
         </div>
@@ -68,14 +56,10 @@
 
 <script lang="ts" setup>
 import { ref, onMounted, onUnmounted } from 'vue'
+import SocialButtons from './SocialButtons.vue'
 
 const currentYear = ref(new Date().getFullYear())
 const isSmallScreen = ref(false)
-
-// Open a link in a new tab
-const openLink = (url: string) => {
-  window.open(url, '_blank')
-}
 
 // Check if the screen size is small
 const checkScreenSize = () => {
