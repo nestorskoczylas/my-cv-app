@@ -10,7 +10,7 @@
     <q-card class="main-card">
       <div class="profile-info">
         <div class="photo-container">
-          <img src="/src/assets/personal.png" alt="Photo" class="photo" />
+          <img src="../assets/personal.png" alt="Photo" class="photo" />
         </div>
         <div class="name">
           <div>{{ $t('firstName') }}</div>
@@ -21,10 +21,10 @@
       </div>
       <div class="social-footer">
         <q-btn flat @click="openLink('https://github.com/nestorskoczylas')" class="social-btn">
-          <img src="/src/assets/github.png" alt="GitHub" />
+          <img src="../assets/github.png" alt="GitHub" />
         </q-btn>
         <q-btn flat @click="openLink('https://linkedin.com/in/nestorskoczylas')" class="social-btn">
-          <img src="/src/assets/linkedin.png" alt="LinkedIn" />
+          <img src="../assets/linkedin.png" alt="LinkedIn" />
         </q-btn>
       </div>
     </q-card>

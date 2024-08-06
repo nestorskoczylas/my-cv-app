@@ -25,10 +25,10 @@
               <!-- begin:: Social Links -->
               <div>
                 <q-btn flat @click="openLink('https://github.com/nestorskoczylas')" class="social-btn">
-                  <img src="/src/assets/github.png" alt="GitHub" />
+                  <img src="../assets/github.png" alt="GitHub" />
                 </q-btn>
                 <q-btn flat @click="openLink('https://linkedin.com/in/nestorskoczylas')" class="social-btn">
-                  <img src="/src/assets/linkedin.png" alt="LinkedIn" />
+                  <img src="../assets/linkedin.png" alt="LinkedIn" />
                 </q-btn>
               </div>
               <!-- end:: Social Links -->
@@ -52,10 +52,10 @@
             <span>(+33) 7 83 59 04 23</span>
             <span>nestor.skoczylas23@gmail.com</span>
             <q-btn flat @click="openLink('https://github.com/nestorskoczylas')" class="social-btn">
-              <img src="/src/assets/github.png" alt="GitHub" />
+              <img src="../assets/github.png" alt="GitHub" />
             </q-btn>
             <q-btn flat @click="openLink('https://linkedin.com/in/nestorskoczylas')" class="social-btn">
-              <img src="/src/assets/linkedin.png" alt="LinkedIn" />
+              <img src="../assets/linkedin.png" alt="LinkedIn" />
             </q-btn>
           </div>
           <!-- end:: Right Section: Contact Info and Social Links -->
