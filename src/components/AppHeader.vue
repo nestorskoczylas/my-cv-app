@@ -23,10 +23,10 @@
       <q-toolbar-title class="right-section" v-if="!isMediumScreen">
         <!-- begin:: Navigation Buttons -->
         <q-btn
-          :class="{ 'active-btn': isActive('home') }"
+          :class="{ 'active-btn': isActive('aboutme') }"
           flat
           :label="$t('AboutMe')"
-          @click="goTo('home')"
+          @click="goTo('aboutme')"
         />
         <q-btn
           :class="{ 'active-btn': isActive('cv') }"
@@ -89,7 +89,7 @@
 
     <!-- begin:: Drawer Navigation List -->
     <q-list class="drawer-list">
-      <q-item clickable @click="goTo('home')">
+      <q-item clickable @click="goTo('aboutme')">
         <q-item-section>{{ $t('AboutMe') }}</q-item-section>
         <q-item-section side>
           <q-icon name="chevron_right" />
@@ -153,7 +153,7 @@ const goTo = (path: string) => {
 
 // Function to check if a route is active
 const isActive = (name: string) => {
-  return route.name === name || (route.name === undefined && name === 'home')
+  return route.name === name
 }
 
 // Function to change the language
