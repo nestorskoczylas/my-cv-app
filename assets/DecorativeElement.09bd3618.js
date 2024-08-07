@@ -1,0 +1,1 @@
+import{_ as e}from"./plugin-vue_export-helper.038d3586.js";import{U as t,V as _}from"./index.e7bb4d84.js";const r={},c={class:"decorative-element"};function o(a,n){return t(),_("div",c)}var d=e(r,[["render",o],["__scopeId","data-v-0a34093e"]]);export{d as D};
