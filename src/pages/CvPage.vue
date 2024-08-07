@@ -47,14 +47,14 @@
 
       <!-- Formations Cards -->
       <EducationCard
-        v-for="(formation, index) in formations"
+        v-for="(training, index) in trainings"
         :key="index"
-        :year="formation.year"
-        :title="formation.title"
-        :entity="formation.entity"
-        :location="formation.location"
-        :descriptionTitle="formation.descriptionTitle"
-        :descriptions="formation.descriptions"
+        :year="training.year"
+        :title="training.title"
+        :entity="training.entity"
+        :location="training.location"
+        :descriptionTitle="training.descriptionTitle"
+        :descriptions="training.descriptions"
       />
 
       <!-- Section for Title -->
@@ -131,7 +131,7 @@ const educations = computed(() => tm('educations') as Array<{
   descriptions: string[]
 }>)
 
-const formations = computed(() => tm('formations') as Array<{
+const trainings = computed(() => tm('trainings') as Array<{
   year: string
   title: string
   entity: string

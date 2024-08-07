@@ -106,7 +106,7 @@ export default {
       ]
     }
   ],  
-  formations: [
+  trainings: [
     {
       year: 'Juin 2019',
       title: 'Certificat de Qualification Pyrotechnique F4T2',
