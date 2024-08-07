@@ -3,7 +3,7 @@
     <div class="cv-background">
       <!-- Section for Title -->
       <div class="title-container">
-        <div class="decorative-element"></div>
+        <DecorativeElement />
         <h4>{{ $t('experiencesTitle') }}</h4>
       </div>
 
@@ -23,7 +23,7 @@
 
       <!-- Section for Title -->
       <div class="title-container">
-        <div class="decorative-element"></div>
+        <DecorativeElement />
         <h4>{{ $t('diplomasTitle') }}</h4>
       </div>
 
@@ -41,7 +41,7 @@
 
       <!-- Section for Title -->
       <div class="title-container">
-        <div class="decorative-element"></div>
+        <DecorativeElement />
         <h4>{{ $t('trainingsTitle') }}</h4>
       </div>
 
@@ -59,7 +59,7 @@
 
       <!-- Section for Title -->
       <div class="title-container">
-        <div class="decorative-element"></div>
+        <DecorativeElement />
         <h4>{{ $t('personalExperiencesTitle') }}</h4>
       </div>
 
@@ -79,7 +79,7 @@
 
       <!-- Section for Title -->
       <div class="title-container">
-        <div class="decorative-element"></div>
+        <DecorativeElement />
         <h4>{{ $t('skillsTitle') }}</h4>
       </div>
 
@@ -90,7 +90,7 @@
 
       <!-- Section for Title -->
       <div class="title-container">
-        <div class="decorative-element"></div>
+        <DecorativeElement />
         <h4>{{ $t('qualitiesTitle') }}</h4>
       </div>
 
@@ -108,6 +108,7 @@ import { computed } from 'vue'
 import ExperienceCard from '../components/ExperienceCard.vue'
 import EducationCard from '../components/EducationCard.vue'
 import SkillCard from '../components/SkillCard.vue'
+import DecorativeElement from '../components/DecorativeElement.vue'
 
 const { tm } = useI18n()
 
@@ -182,12 +183,5 @@ const qualities = computed(() => tm('qualities') as Array<{
 
 .title-container h4 {
   font-weight: bold;
-}
-
-.decorative-element {
-  width: 15px;
-  height: 15px;
-  background-color: blue;
-  margin-right: 15px;
 }
 </style>

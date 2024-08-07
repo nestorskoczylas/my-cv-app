@@ -6,7 +6,7 @@
       <div class="left-section">
         <!-- begin:: Name Section -->
         <div class="name-section">
-          <div class="decorative-element"></div>
+          <DecorativeElement />
           <span class="name">{{ $t('fullName') }}</span>
         </div>
         <!-- end:: Name Section -->
@@ -131,6 +131,7 @@
 </template>
 
 <script lang="ts" setup>
+import DecorativeElement from './DecorativeElement.vue'
 import { ref, onMounted, onUnmounted } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import { useI18n } from 'src/boot/i18n'
@@ -201,13 +202,6 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   margin-bottom: 2px;
-}
-
-.decorative-element {
-  width: 15px;
-  height: 15px;
-  background-color: blue;
-  margin-right: 10px;
 }
 
 .header-info {
