@@ -59,7 +59,9 @@ module.exports = configure(function (/* ctx */) {
 
       publicPath: '/my-cv-app/',
       // analyze: true,
-      // env: {},
+      env: {
+        BASE_URL_IMAGE: process.env.NODE_ENV === 'production' ? '/my-cv-app/' : '/public/'
+      },
       // rawDefine: {}
       // ignorePublicFolder: true,
       // minify: false,
