@@ -14,9 +14,11 @@
 </template>
 
 <script lang="ts" setup>
+import { useRouter } from 'vue-router'
 import CardBase from '../base/CardBase.vue'
 
-defineProps<{
+const props = defineProps<{
+  id: number
   year: string
   title: string
   entity: string
@@ -28,10 +30,10 @@ defineProps<{
   showMoreDetails?: boolean
 }>()
 
-const emit = defineEmits(['moreDetails'])
+const router = useRouter()
 
 const handleMoreDetails = () => {
-  emit('moreDetails')
+  router.push({ name: 'experience', params: { id: props.id } })
 }
 
 </script>

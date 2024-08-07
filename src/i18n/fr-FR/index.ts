@@ -20,6 +20,7 @@ export default {
   MoreDetails: 'Plus de détails',
   experiences: [
     {
+      id: 3,
       year: 'Septembre 2022 - 2024',
       title: 'Développeur FullStack - Alternance',
       entity: 'Opalean',
@@ -41,6 +42,7 @@ export default {
       showMoreDetails: true
     },
     {
+      id: 2,
       year: 'Avril - Juillet 2022',
       title: 'Développeur Web - Stage',
       entity: 'Vallourec Tubes France',
@@ -63,6 +65,7 @@ export default {
       showMoreDetails: true
     },
     {
+      id: 1,
       year: '2022 - Aujourd’hui',
       title: 'Pyrotechnicien',
       entity: 'Wagnon Artifices',

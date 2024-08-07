@@ -8,6 +8,7 @@
       <ExperienceCard
       v-for="(experience, index) in experiences"
       :key="index"
+      :id="experience.id"
       :year="experience.year"
       :title="experience.title"
       :entity="experience.entity"
@@ -56,6 +57,7 @@
       <ExperienceCard
         v-for="(personalExperience, index) in personalExperiences"
         :key="index"
+        :id="personalExperience.id"
         :year="personalExperience.year"
         :title="personalExperience.title"
         :entity="personalExperience.entity"
@@ -96,6 +98,7 @@ import SectionCardTitle from 'src/components/cards/SectionCardTitle.vue'
 const { tm } = useI18n()
 
 const experiences = computed(() => tm('experiences') as Array<{
+  id: number
   year: string
   title: string
   entity: string
@@ -126,6 +129,7 @@ const trainings = computed(() => tm('trainings') as Array<{
 }>)
 
 const personalExperiences = computed(() => tm('personalExperiences') as Array<{
+  id: number
   year: string
   title: string
   entity: string
