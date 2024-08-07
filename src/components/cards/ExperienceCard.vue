@@ -1,5 +1,5 @@
 <template>
-  <CardBase :year="year" :title="title" :entity="entity" :location="location">
+  <CardBase :year="year" :title="title" :entity="entity" :location="location" :showMoreDetails="showMoreDetails" @more-details="handleMoreDetails">
     <template v-slot:details>
       <div class="detail-title">{{ detailTitle }}</div>
       <div class="detail-list">{{ details.join(', ') }}</div>
@@ -25,7 +25,15 @@ defineProps<{
   details: string[]
   descriptionTitle: string
   descriptions: string[]
+  showMoreDetails?: boolean
 }>()
+
+const emit = defineEmits(['moreDetails'])
+
+const handleMoreDetails = () => {
+  emit('moreDetails')
+}
+
 </script>
 
 <style scoped lang="scss">

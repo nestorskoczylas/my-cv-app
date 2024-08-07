@@ -17,6 +17,7 @@ export default {
   personalExperiencesTitle: 'Expériences Personnelles',
   skillsTitle: 'Compétences',
   qualitiesTitle: 'Qualités',
+  MoreDetails: 'Plus de détails',
   experiences: [
     {
       year: 'Septembre 2022 - 2024',
@@ -36,7 +37,8 @@ export default {
         'Ajout de nouvelles routes à une API existante (VB.Net)',
         'Création d’un prototype de drag-and-drop pour les fichiers CSV et XLS (Vue2.js)',
         'Migration d’une API existante de VB.Net à C#'
-      ]
+      ],
+      showMoreDetails: true
     },
     {
       year: 'Avril - Juillet 2022',
@@ -57,7 +59,8 @@ export default {
         'Participation aux rituels Agile de l’équipe de développement',
         'Contribution à l’analyse technique de la solution',
         'Rédaction de tests fonctionnels et unitaires'
-      ]
+      ],
+      showMoreDetails: true
     },
     {
       year: '2022 - Aujourd’hui',
@@ -76,7 +79,8 @@ export default {
         'Préparation, installation et manipulation des feux d’artifices en veillant à la sécurité du public et du personnel',
         'Prise en charge individuelle de tâches spécifiques liées à la mise en place et au déclenchement des feux d’artifices',
         'Application stricte des procédures de sécurité et des réglementations en vigueur lors de la manipulation des feux d’artifices'
-      ]
+      ],
+      showMoreDetails: false
     }
   ],
   educations: [

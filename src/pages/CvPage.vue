@@ -16,6 +16,7 @@
       :details="experience.details"
       :descriptionTitle="experience.descriptionTitle"
       :descriptions="experience.descriptions"
+      :showMoreDetails="experience.showMoreDetails"
       />
 
       <!-- Section for Title -->
@@ -103,6 +104,7 @@ const experiences = computed(() => tm('experiences') as Array<{
   details: string[]
   descriptionTitle: string
   descriptions: string[]
+  showMoreDetails: boolean
 }>)
 
 const educations = computed(() => tm('educations') as Array<{

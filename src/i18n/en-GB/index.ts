@@ -17,6 +17,7 @@ export default {
   personalExperiencesTitle: 'Personal Experiences',
   skillsTitle: 'Skills',
   qualitiesTitle: 'Qualities',
+  MoreDetails: 'More Details',
   experiences: [
     {
       year: 'September 2022 - 2024',
@@ -36,7 +37,8 @@ export default {
         'Adding new routes to an existing API (VB.Net)',
         'Creating a drag-and-drop prototype for CSV and XLS files (Vue2.js)',
         'Migrating an existing API from VB.Net to C#'
-      ]
+      ],
+      showMoreDetails: true
     },
     {
       year: 'April - July 2022',
@@ -57,7 +59,8 @@ export default {
         'Participation in the Agile rituals of the development team',
         'Contribution to the technical analysis of the solution',
         'Writing functional and unit tests'
-      ]
+      ],
+      showMoreDetails: true
     },
     {
       year: '2022 - Present',
@@ -76,7 +79,8 @@ export default {
         'Preparation, installation, and handling of fireworks while ensuring the safety of the public and staff',
         'Individual management of specific tasks related to the setup and ignition of fireworks',
         'Strict application of safety procedures and current regulations when handling fireworks'
-      ]
+      ],
+      showMoreDetails: false
     }
   ],
   educations: [
