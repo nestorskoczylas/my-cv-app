@@ -45,10 +45,10 @@
         <!-- begin:: Language Selector -->
         <div class="language-selector">
           <q-btn flat @click="changeLanguage('fr-FR')" class="lang-btn">
-            <img src="../assets/flag_fr.png" alt="French" />
+            <img src="/../assets/flag_fr.png" alt="French" />
           </q-btn>
           <q-btn flat @click="changeLanguage('en-GB')" class="lang-btn">
-            <img src="../assets/flag_en.png" alt="English" />
+            <img src="/../assets/flag_en.png" alt="English" />
           </q-btn>
         </div>
         <!-- end:: Language Selector -->
@@ -113,12 +113,12 @@
       <div class="flex justify-around" style="margin-top: 1rem;">
         <q-item clickable @click="changeLanguage('fr-FR')">
           <q-item-section class="lang-btn-mobile">
-            <img src="../assets/flag_fr.png" alt="French" />
+            <img src="/../assets/flag_fr.png" alt="French" />
           </q-item-section>
         </q-item>
         <q-item clickable @click="changeLanguage('en-GB')">
           <q-item-section class="lang-btn-mobile">
-            <img src="../assets/flag_en.png" alt="English" />
+            <img src="/../assets/flag_en.png" alt="English" />
           </q-item-section>
         </q-item>
       </div>
@@ -131,7 +131,7 @@
 </template>
 
 <script lang="ts" setup>
-import DecorativeElement from './DecorativeElement.vue'
+import DecorativeElement from '../base/DecorativeElement.vue'
 import { ref, onMounted, onUnmounted } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import { useI18n } from 'src/boot/i18n'

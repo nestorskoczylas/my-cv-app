@@ -58,7 +58,7 @@
 
 <script lang="ts" setup>
 import { ref, onMounted, onUnmounted } from 'vue'
-import SocialButtons from './SocialButtons.vue'
+import SocialButtons from '../SocialButtons.vue'
 
 const currentYear = ref(new Date().getFullYear())
 const isSmallScreen = ref(false)

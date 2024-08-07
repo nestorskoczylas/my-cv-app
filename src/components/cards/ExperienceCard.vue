@@ -14,7 +14,7 @@
 </template>
 
 <script lang="ts" setup>
-import CardBase from './CardBase.vue';
+import CardBase from '../base/CardBase.vue'
 
 defineProps<{
   year: string

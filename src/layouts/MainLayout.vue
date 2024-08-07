@@ -9,6 +9,6 @@
 </template>
 
 <script lang="ts" setup>
-import Header from '../components/AppHeader.vue'
-import Footer from '../components/AppFooter.vue'
+import Header from '../components/layout/AppHeader.vue'
+import Footer from '../components/layout/AppFooter.vue'
 </script>

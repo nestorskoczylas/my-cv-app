@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts" setup>
-import DecorativeElement from './DecorativeElement.vue'
+import DecorativeElement from '../base/DecorativeElement.vue'
 
 defineProps<{
   title: string

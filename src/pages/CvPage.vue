@@ -87,10 +87,10 @@
 <script lang="ts" setup>
 import { useI18n } from 'src/boot/i18n'
 import { computed } from 'vue'
-import ExperienceCard from '../components/ExperienceCard.vue'
-import EducationCard from '../components/EducationCard.vue'
-import SkillCard from '../components/SkillCard.vue'
-import SectionCardTitle from 'src/components/SectionCardTitle.vue'
+import ExperienceCard from '../components/cards/ExperienceCard.vue'
+import EducationCard from '../components/cards/EducationCard.vue'
+import SkillCard from '../components/cards/SkillCard.vue'
+import SectionCardTitle from 'src/components/cards/SectionCardTitle.vue'
 
 const { tm } = useI18n()
 
