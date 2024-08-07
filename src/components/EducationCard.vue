@@ -1,24 +1,17 @@
 <template>
-  <q-card class="education-card">
-    <q-card-section>
-      <div class="education-content">
-        <div class="education-section">
-          <div class="year">{{ year }}</div>
-          <div class="title">{{ title }}</div>
-          <div class="entity-location">
-            {{ entity }} - {{ location }}
-          </div>
-          <div class="description-title">{{ descriptionTitle }}</div>
-          <ul class="description-list">
-            <li v-for="(desc, index) in descriptions" :key="index">{{ desc }}</li>
-          </ul>
-        </div>
-      </div>
-    </q-card-section>
-  </q-card>
+  <CardBase :year="year" :title="title" :entity="entity" :location="location">
+    <template v-slot:descriptions>
+      <div class="description-title">{{ descriptionTitle }}</div>
+      <ul class="description-list">
+        <li v-for="(desc, index) in descriptions" :key="index">{{ desc }}</li>
+      </ul>
+    </template>
+  </CardBase>
 </template>
 
 <script lang="ts" setup>
+import CardBase from './CardBase.vue';
+
 defineProps<{
   year: string
   title: string
@@ -30,42 +23,6 @@ defineProps<{
 </script>
 
 <style scoped lang="scss">
-.education-card {
-  margin-bottom: 1.8rem;
-  background-color: white;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 0.6rem;
-}
-
-.education-content {
-  display: flex;
-  width: 100%;
-}
-
-.education-section {
-  width: 100%;
-  padding: 1.25rem;
-}
-
-.year {
-  color: blue;
-  font-weight: bold;
-  font-size: 1.25rem;
-  margin-bottom: 0.6rem;
-}
-
-.title {
-  font-weight: bold;
-  font-size: 1.1rem;
-  margin-bottom: 0.6rem;
-}
-
-.entity-location {
-  font-size: 1.1rem;
-  color: #666;
-  margin-bottom: 0.6rem;
-}
-
 .description-title {
   font-weight: bold;
   font-size: 1rem;
