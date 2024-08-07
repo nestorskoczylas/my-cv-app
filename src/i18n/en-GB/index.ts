@@ -7,7 +7,6 @@ export default {
   CV: 'Resume',
   Projects: 'Projects',
   license: 'Driving License B',
-  email: 'nestor.skoczylas23@gmail.com',
   MoreInfo: 'More Informations',
   greeting: 'Hello',
   intro: 'Who am I? What do I do?',

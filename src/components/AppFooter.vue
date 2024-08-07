@@ -44,7 +44,7 @@
             <span>{{ $t('license') }}</span>
             <span>(+33) 7 83 59 04 23</span>
             <span>
-              <a :href="'mailto:' + $t('email')" target="_blank" class="email-link">{{ $t('email') }}</a>
+              <a :href="'mailto:nestor.skoczylas23@gmail.com'" target="_blank" class="email-link">nestor.skoczylas23@gmail.com</a>
             </span>
             <SocialButtons />
           </div>
