@@ -2,10 +2,7 @@
   <div class="cv-page">
     <div class="cv-background">
       <!-- Section for Title -->
-      <div class="title-container">
-        <DecorativeElement />
-        <h4>{{ $t('experiencesTitle') }}</h4>
-      </div>
+      <SectionCardTitle :title="$t('experiencesTitle')" />
 
       <!-- Experience Cards -->
       <ExperienceCard
@@ -22,10 +19,7 @@
       />
 
       <!-- Section for Title -->
-      <div class="title-container">
-        <DecorativeElement />
-        <h4>{{ $t('diplomasTitle') }}</h4>
-      </div>
+      <SectionCardTitle :title="$t('diplomasTitle')" />
 
       <!-- Diplomas Cards -->
       <EducationCard
@@ -40,10 +34,7 @@
       />
 
       <!-- Section for Title -->
-      <div class="title-container">
-        <DecorativeElement />
-        <h4>{{ $t('trainingsTitle') }}</h4>
-      </div>
+      <SectionCardTitle :title="$t('trainingsTitle')" />
 
       <!-- Formations Cards -->
       <EducationCard
@@ -58,10 +49,7 @@
       />
 
       <!-- Section for Title -->
-      <div class="title-container">
-        <DecorativeElement />
-        <h4>{{ $t('personalExperiencesTitle') }}</h4>
-      </div>
+      <SectionCardTitle :title="$t('personalExperiencesTitle')" />
 
       <!-- Personal Experiences Cards -->
       <ExperienceCard
@@ -78,10 +66,7 @@
       />
 
       <!-- Section for Title -->
-      <div class="title-container">
-        <DecorativeElement />
-        <h4>{{ $t('skillsTitle') }}</h4>
-      </div>
+      <SectionCardTitle :title="$t('skillsTitle')" />
 
       <!-- Skills Cards -->
       <SkillCard
@@ -89,10 +74,7 @@
       />
 
       <!-- Section for Title -->
-      <div class="title-container">
-        <DecorativeElement />
-        <h4>{{ $t('qualitiesTitle') }}</h4>
-      </div>
+      <SectionCardTitle :title="$t('qualitiesTitle')" />
 
       <!-- Qualities Cards -->
       <SkillCard
@@ -108,7 +90,7 @@ import { computed } from 'vue'
 import ExperienceCard from '../components/ExperienceCard.vue'
 import EducationCard from '../components/EducationCard.vue'
 import SkillCard from '../components/SkillCard.vue'
-import DecorativeElement from '../components/DecorativeElement.vue'
+import SectionCardTitle from 'src/components/SectionCardTitle.vue'
 
 const { tm } = useI18n()
 
