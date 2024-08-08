@@ -4,7 +4,7 @@
       <!-- Section for Title -->
       <div class="title-wrapper">
         <SectionCardTitle :title="$t('experiencesTitle')" />
-        <q-btn class="cv-button" icon="picture_as_pdf" :label="$t('DownloadResume')" flat dense @click="openCv" />
+        <q-btn v-if="!isMobile" class="cv-button" icon="picture_as_pdf" :label="$t('DownloadResume')" flat dense @click="openCv" />
       </div>
 
       <!-- Experience Cards -->
