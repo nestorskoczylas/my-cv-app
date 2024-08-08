@@ -17,7 +17,7 @@
       :details="experience.details"
       :descriptionTitle="experience.descriptionTitle"
       :descriptions="experience.descriptions"
-      :showMoreDetails="experience.showMoreDetails"
+      :showMoreDetails="isMobile ? false : experience.showMoreDetails"
       />
 
       <!-- Section for Title -->
@@ -96,6 +96,8 @@ import SkillCard from '../components/cards/SkillCard.vue'
 import SectionCardTitle from 'src/components/cards/SectionCardTitle.vue'
 
 const { tm } = useI18n()
+
+const isMobile = computed(() => window.innerWidth < 768)
 
 const experiences = computed(() => tm('experiences') as Array<{
   id: number
