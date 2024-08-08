@@ -20,7 +20,7 @@
 
 <script lang="ts" setup>
 import { useI18n } from 'vue-i18n'
-import { onMounted, computed, ref } from 'vue'
+import { watch, computed, ref } from 'vue'
 import { useRoute } from 'vue-router'
 
 const route = useRoute()
@@ -31,12 +31,28 @@ const experiences = computed(() => tm('experiences') as Array<{
   id: number
   title: string
   entity: string
+  location: string
+  duration: string
+  keywords: string
+  contextTitle: string
+  context: string
+  environmentTitle: string
+  environments: string[]
+  methodologyTitle: string
+  methodologies: string
+  achievements: string
+  achievementsGeneralTitle: string
+  achievementsGenerals: string[]
+  achievementsMethodologyTitle: string
+  achievementsMethodologies: string[]
+  interventionsTitle: string
+  interventions: string[]
 }>)
 
-onMounted(() => {
+watch([experiences, () => route.params.id], () => {
   const id = route.params.id[0]
-  experience.value = experiences.value.find((experience) => experience.id === parseInt(id))
-})
+  experience.value = experiences.value.find(exp => exp.id === parseInt(id))
+}, { immediate: true })
 </script>
 
 <style scoped lang="scss">
