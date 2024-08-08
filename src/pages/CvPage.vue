@@ -2,7 +2,10 @@
   <div class="cv-page">
     <div class="cv-background">
       <!-- Section for Title -->
-      <SectionCardTitle :title="$t('experiencesTitle')" />
+      <div class="title-container">
+        <SectionCardTitle :title="$t('experiencesTitle')" />
+        <q-btn class="cv-button" icon="picture_as_pdf" :label="$t('DownloadResume')" flat dense @click="openCv" />
+      </div>
 
       <!-- Experience Cards -->
       <ExperienceCard
@@ -99,6 +102,11 @@ const { tm } = useI18n()
 
 const isMobile = computed(() => window.innerWidth < 768)
 
+const baseUrlImg = process.env.BASE_URL_IMAGE
+const openCv = () => {
+  window.open(`${baseUrlImg}cv.pdf`, '_blank')
+}
+
 const experiences = computed(() => tm('experiences') as Array<{
   id: number
   year: string
@@ -169,10 +177,14 @@ const qualities = computed(() => tm('qualities') as Array<{
 /* Title and Decorative Element */
 .title-container {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
-.title-container h4 {
-  font-weight: bold;
+.cv-button {
+  background-color: white;
+  color: $blue;
+  margin-left: 10px;
+  padding: 0.5rem;
 }
 </style>

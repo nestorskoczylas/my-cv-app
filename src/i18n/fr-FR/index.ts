@@ -18,6 +18,7 @@ export default {
   skillsTitle: 'Compétences',
   qualitiesTitle: 'Qualités',
   MoreDetails: 'Plus de détails',
+  DownloadResume: 'Télécharger le CV',
   in: 'à',
   contextTitle: 'Contexte',
   environmentTitle: 'Environnements',

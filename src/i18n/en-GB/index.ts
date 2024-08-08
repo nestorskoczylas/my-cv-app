@@ -18,6 +18,7 @@ export default {
   skillsTitle: 'Skills',
   qualitiesTitle: 'Qualities',
   MoreDetails: 'More Details',
+  DownloadResume: 'Download Resume',
   in: 'in',
   contextTitle: 'Context',
   environmentTitle: 'Environments',
