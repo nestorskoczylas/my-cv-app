@@ -18,11 +18,20 @@ export default {
   skillsTitle: 'Skills',
   qualitiesTitle: 'Qualities',
   MoreDetails: 'More Details',
+  in: 'in',
+  contextTitle: 'Context',
+  environmentTitle: 'Environments',
+  methodologyTitle: 'Methodologies',
+  achievements: 'Main achievements',
+  achievementsGeneralTitle: 'General',
+  achievementsMethodologyTitle: 'Methodology',
+  interventionsTitle: 'Example of an intervention',
   experiences: [
     {
       id: 3,
       year: 'September 2022 - 2024',
-      title: 'FullStack Developer - Apprenticeship',
+      title: 'FullStack Developer',
+      employmentType: 'Apprenticeship',
       entity: 'Opalean',
       location: 'Lille, France',
       detailTitle: 'Skills',
@@ -39,12 +48,21 @@ export default {
         'Creating a drag-and-drop prototype for CSV and XLS files (Vue2.js)',
         'Migrating an existing API from VB.Net to C#'
       ],
-      showMoreDetails: true
+      showMoreDetails: true,
+      duration: '2 years - September 2022 to September 2024',
+      keywords: ['Microsoft', 'Project', 'Overhaul', 'Supply Chain', 'Migration'],
+      context: 'Opalean, a company specialising in web application development, designed and implemented a CRM solution to support its clients in managing their handling equipment. This solution, designed to optimise transport flows, is now used by numerous companies across various industries. As a Full Stack Developer (on a work-study programme), I had the opportunity to actively contribute to the development and enhancement of this WMS solution by engaging in real-world projects.',
+      environments: ['C#', 'Google Suite', 'Trello', 'VB.NET', 'Vue.js', 'SQL Server', 'MVC'],
+      methodologies: ['Waterfall', 'Traditional'],
+      achievementsGenerals: ['Web application development', 'API development', 'Database management', 'Integration of third-party solutions', 'Application deployment and maintenance'],
+      achievementsMethodologies: ['Adaptation to a work environment without Agile methodology', 'Implementation of a personal and rigorous organisation', 'Ability to quickly adapt and learn in a constantly evolving environment', 'Detailed documentation of developed solutions to facilitate code maintenance and evolution', 'Reading technical documentation and participating in training sessions'],
+      interventions: ['Development of a new customer profile management feature', 'Bug fixing and application performance optimisation', 'Development of a CRM application for customer profile management', 'Creation of a prototype for csv and xls file importation', 'Migration of an existing API from VB.Net to C#']
     },
     {
       id: 2,
       year: 'April - July 2022',
-      title: 'Web Developer - Internship',
+      title: 'Web Developer',
+      employmentType: 'Internship',
       entity: 'Vallourec Tubes France',
       location: 'Aulnoye-Aymeries, France',
       detailTitle: 'Skills',
@@ -62,7 +80,15 @@ export default {
         'Contribution to the technical analysis of the solution',
         'Writing functional and unit tests'
       ],
-      showMoreDetails: true
+      showMoreDetails: true,
+      duration: '4 months - April to July 2022',
+      keywords: ['Team', 'React', 'Scrum', 'Collaboration', 'Overhaul', 'Java', 'Agile', 'Business'],
+      context: 'Vallourec, a global leader in steel tubular solutions, designs, produces, and distributes seamless tubes and components for the energy sectors, including oil and gas, as well as for industrial applications. My internship at Vallourec took place within the R&D department, where I had the opportunity to contribute to the development of a web-based inventory management application.',
+      environments: ['React', 'TypeScript', 'Cypress', 'Scrum', 'Java', 'Jira', 'Confluence'],
+      methodologies: ['Agile', 'Scrum', 'Sprint', 'User Story'],
+      achievementsGenerals: ['User interface development', 'API integration', 'Implementation of unit tests', 'Technical documentation writing'],
+      achievementsMethodologies: ['Working within an Agile methodology, participating in planning meetings, daily sprints, and sprint reviews', 'Using version control tools such as Git and GitLab to track code changes', 'Following best development practices to ensure code quality and maintainability'],
+      interventions: ['Development of a new user interface for the inventory management CRM', 'Overhaul of the web application design to enhance user experience', 'Participation in Agile rituals with the development team', 'Writing functional and unit tests to ensure application quality']
     },
     {
       id: 1,

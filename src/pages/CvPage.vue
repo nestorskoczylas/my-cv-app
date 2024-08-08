@@ -10,7 +10,7 @@
       :key="index"
       :id="experience.id"
       :year="experience.year"
-      :title="experience.title"
+      :title="experience.employmentType ? `${experience.title} - ${experience.employmentType}` : experience.title"
       :entity="experience.entity"
       :location="experience.location"
       :detailTitle="experience.detailTitle"
@@ -101,6 +101,7 @@ const experiences = computed(() => tm('experiences') as Array<{
   id: number
   year: string
   title: string
+  employmentType?: string
   entity: string
   location: string
   detailTitle: string

@@ -18,11 +18,20 @@ export default {
   skillsTitle: 'Compétences',
   qualitiesTitle: 'Qualités',
   MoreDetails: 'Plus de détails',
+  in: 'à',
+  contextTitle: 'Contexte',
+  environmentTitle: 'Environnements',
+  methodologyTitle: 'Méthodologies',
+  achievements: 'Principales Réalisations',
+  achievementsGeneralTitle: 'Général',
+  achievementsMethodologyTitle: 'Méthodologie',
+  interventionsTitle: 'Exemple d’intervention',
   experiences: [
     {
       id: 3,
       year: 'Septembre 2022 - 2024',
-      title: 'Développeur FullStack - Alternance',
+      title: 'Développeur FullStack',
+      employmentType: 'Alternance',
       entity: 'Opalean',
       location: 'Lille, France',
       detailTitle: 'Compétences',
@@ -39,12 +48,21 @@ export default {
         'Création d’un prototype de drag-and-drop pour les fichiers CSV et XLS (Vue2.js)',
         'Migration d’une API existante de VB.Net à C#'
       ],
-      showMoreDetails: true
+      showMoreDetails: true,
+      duration: '2 ans - Septembre 2022 à Septembre 2024',
+      keywords: ['Microsoft', 'Projet', 'Refonte', 'Supply chain', 'Migration'],
+      context: 'Opalean, une entreprise spécialisée dans le développement d’applications web, a conçu et mis en place une solution CRM pour accompagner ses clients dans la gestion de leurs supports de manutention. Cette solution, conçue pour optimiser les flux de transport, est aujourd’hui utilisée par de nombreuses entreprises dans des secteurs d’activités variés. En tant que Développeur Full Stack (en alternance), j’ai eu l’opportunité de contribuer activement au développement et à l’amélioration de cette solution WMS, en m’impliquant dans des projets concrets.',
+      environments: ['C#', 'Suite Google', 'Trello', 'VB.NET', 'Vue.js', 'SQL Server', 'MVC'],
+      methodologies: ['Cycle en V', 'Archaïque'],
+      achievementsGenerals: ['Développement d’applications web', 'Développement d’API', 'Gestion de bases de données', 'Intégration de solutions tierces', 'Déploiement et maintenance d’applications'],
+      achievementsMethodologies: ['Adaptation à un environnement de travail sans méthodologie Agile', 'Mise en place d’une organisation personnelle et rigoureuse', 'Capacité d’adaptation et d’apprentissage rapide dans un environnement en constante évolution', 'Documentation détaillée des solutions développées pour faciliter la maintenance et l’évolution du code', 'Lecture de documentation technique et participation à des formations'],
+      interventions: ['Développement d’une nouvelle fonctionnalité de gestion des profils clients', 'Correction de bugs et optimisation des performances de l’application', 'Développement d’une application CRM pour la gestion des profils clients', 'Création d’un prototype d’importation de fichier csv et xls', 'Migration d’une API existante de VB.Net à C#']
     },
     {
       id: 2,
       year: 'Avril - Juillet 2022',
-      title: 'Développeur Web - Stage',
+      title: 'Développeur Web',
+      employmentType: 'Stage',
       entity: 'Vallourec Tubes France',
       location: 'Aulnoye-Aymeries, France',
       detailTitle: 'Compétences',
@@ -62,7 +80,15 @@ export default {
         'Contribution à l’analyse technique de la solution',
         'Rédaction de tests fonctionnels et unitaires'
       ],
-      showMoreDetails: true
+      showMoreDetails: true,
+      duration: '4 mois - Avril à Juillet 2022',
+      keywords: ['Equipe', 'React', 'Scrum', 'Echange', 'Refonte', 'Java', 'Agile', 'Métier'],
+      context: 'Vallourec, acteur mondial des solutions tubulaires en acier, conçoit, produit et distribue des tubes sans soudure et des composants pour les secteurs de l’énergie, notamment le pétrole et le gaz, et de l’industrie. Mon stage chez Vallourec s’est déroulé au sein du département R&D, où j’ai eu l’opportunité de contribuer au développement d’une application web de gestion d’inventaire.',
+      environments: ['React', 'TypeScript', 'Cypress', 'Scrum', 'Java', 'Jira', 'Confluence'],
+      methodologies: ['Agile', 'Scrum', 'Sprint', 'User Story'],
+      achievementsGenerals: ['Développement d’interfaces utilisateur', 'Intégration d’API', 'Mise en place de tests unitaires', 'Rédaction de documentation technique'],
+      achievementsMethodologies: ['Travail en suivant une méthodologie Agile, en participant aux réunions de planification, aux sprints quotidiens et aux revues de sprint', 'Utilisation d’outils de gestion de version tels que Git et GitLab pour suivre les modifications apportées au code', 'Respect des bonnes pratiques de développement pour garantir la qualité et la maintenabilité du code'],
+      interventions: ['Développement d’une nouvelle interface utilisateur pour le CRM de gestion d’inventaire', 'Refonte du design de l’application web pour améliorer l’expérience utilisateur', 'Participation aux rituels Agile de l’équipe de développement', 'Rédaction de tests fonctionnels et unitaires pour garantir la qualité de l’application']
     },
     {
       id: 1,
