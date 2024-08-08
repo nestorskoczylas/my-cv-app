@@ -2,7 +2,7 @@
   <div class="cv-page">
     <div class="cv-background">
       <!-- Section for Title -->
-      <div class="title-container">
+      <div class="title-wrapper">
         <SectionCardTitle :title="$t('experiencesTitle')" />
         <q-btn class="cv-button" icon="picture_as_pdf" :label="$t('DownloadResume')" flat dense @click="openCv" />
       </div>
@@ -175,7 +175,7 @@ const qualities = computed(() => tm('qualities') as Array<{
 }
 
 /* Title and Decorative Element */
-.title-container {
+.title-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
