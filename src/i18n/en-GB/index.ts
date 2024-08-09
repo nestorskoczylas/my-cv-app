@@ -236,6 +236,44 @@ export default {
       title: 'Personal',
       description: 'Listening Skills, Volunteering Spirit, Tactful'
     }
+  ],
+  projectsTitle: 'Completed Projects',
+  linkTitle: 'Links',
+  technologyTitle: 'Technologies',
+  projects: [
+    {
+      title: 'CV Application in VueJS',
+      year: '2024',
+      description: 'This project aims to present my CV in the form of a web application, using the VueJS framework. It showcases my skills, professional experiences, and achievements in an interactive and dynamic way.',
+      links: [
+        {
+          title: 'GitHub: My CV App',
+          url: 'https://github.com/nestorskoczylas/my-cv-app'
+        },
+        {
+          title: 'Demo: My CV App',
+          url: 'https://nestorskoczylas.github.io/my-cv-app/'
+        }
+      ],
+      technologies: ['VueJS', 'Quasar', 'TypeScript', 'Vue Router', 'Vuex', 'Vue-i18n', 'GitHub Pages']
+    },
+    {
+      title: 'Final Year Project: Stud’Hunt',
+      year: 'September 2023 - January 2024',
+      entity: 'University of Lille',
+      location: 'Lille, France',
+      description: 'Stud’Hunt is a final year project carried out in a team as part of my Master’s degree in Computer Science, in collaboration with the IAE and its Master MCC. It is a web application for searching internships and work placements, connecting students and companies.',
+      links: [
+        {
+          title: 'GitHub: Stud’Hunt',
+          url: 'https://github.com/Stud-Hunt'
+        },
+        {
+          title: 'LinkedIn: Stud’Hunt',
+          url: 'https://www.linkedin.com/company/stud-hunt/'
+        }
+      ],
+      technologies: ['Flutter', 'Spring Boot', 'Spring Security', 'BLoC', 'GitHub Actions', 'Docker', 'Google Compute Engine']
+    }
   ]
-
 }

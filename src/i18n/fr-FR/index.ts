@@ -236,5 +236,44 @@ export default {
       title: 'Humaines',
       description: 'Capacité d’écoute, Volontaire, Conciliant'
     }
+  ],
+  projectsTitle: 'Projets réalisés',
+  linkTitle: 'Liens',
+  technologyTitle: 'Technologies',
+  projects: [
+    {
+      title: 'Application CV en VueJS',
+      year: '2024',
+      description: 'Ce projet a pour objectif de présenter mon CV sous forme d’application web, en utilisant le framework VueJS. Il permet de mettre en avant mes compétences, mes expériences professionnelles et mes réalisations de manière interactive et dynamique.',
+      links: [
+        {
+          title: 'GitHub : My CV App',
+          url: 'https://github.com/nestorskoczylas/my-cv-app'
+        },
+        {
+          title: 'Démo : My CV App',
+          url: 'https://nestorskoczylas.github.io/my-cv-app/'
+        }
+      ],
+      technologies: ['VueJS', 'Quasar', 'TypeScript', 'Vue Router', 'Vuex', 'Vue-i18n', 'GitHub Pages']
+    },
+    {
+      title: 'Projet de fin d’études : Stud’Hunt',
+      year: 'Septembre 2023 - Janvier 2024',
+      entity: 'Université de Lille',
+      location: 'Lille, France',
+      description: 'Stud’Hunt est un projet de fin d’études réalisé en équipe dans le cadre de mon Master Informatique, en collaboration avec l’IAE et son Master MCC. Il s’agit d’une application web de recherche de stages et d’alternances, qui met en relation les étudiants et les entreprises.',
+      links: [
+        {
+          title: 'GitHub : Stud’Hunt',
+          url: 'https://github.com/Stud-Hunt'
+        },
+        {
+          title: 'LinkedIn : Stud’Hunt',
+          url: 'https://www.linkedin.com/company/stud-hunt/'
+        }
+      ],
+      technologies: ['Flutter', 'Spring Boot', 'Spring Security', 'BLoC', 'GitHub Actions', 'Docker', 'Google Compute Engine']
+    }
   ]
 }
